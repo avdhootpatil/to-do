@@ -6,7 +6,7 @@ const DeleteModal = ({ show, onHide, handleDeleteClick }) => {
     <Modal
       show={show}
       onHide={onHide}
-      size="lg"
+      size="md"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >

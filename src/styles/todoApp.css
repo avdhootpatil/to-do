@@ -1,0 +1,134 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-task-btn {
+  border-radius: 20px;
+}
+
+.table-head-cell {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sort-button {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.t-cell {
+  min-width: 100px;
+}
+
+.edit-btn,
+.edit-btn:hover,
+.edit-btn:focus {
+  background-color: blue;
+  border: none;
+}
+
+.done-btn,
+.done-btn:hover,
+.done-btn:focus {
+  background-color: green;
+  border: none;
+  width: 69px;
+}
+
+.delete-btn,
+.delete-btn:hover,
+.delete-btn:focus {
+  background-color: red;
+  border: none;
+}
+
+.task-datepicker,
+.task-datepicker:focus-visible {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none;
+}
+
+.todo-tabs {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-tabs {
+  border-bottom: none;
+}
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+  border-color: white;
+  border: none;
+  outline: none;
+}
+
+.nav-link,
+.nav-link:hover {
+  color: #0472b2;
+}
+
+.nav-tabs .nav-link.active {
+  padding-left: 55px !important;
+  padding-right: 55px !important ;
+  background-color: #0472b2;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  border: none;
+  z-index: 2;
+}
+
+.task-complete {
+  text-decoration: line-through;
+}
+
+.delete-modal-container {
+  width: 100%;
+  align-items: center;
+}
+
+.rotate-icon {
+  transform: rotate(180deg);
+}
+
+.close:focus {
+  outline: none;
+}
+
+.clip-summary {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.desc {
+  height: 40px;
+  resize: none;
+}
+
+.error {
+  height: 15px;
+}
+
+.disabled-datepicker {
+  background-color: #e9ecef;
+}
+
+.task-cell {
+  cursor: pointer;
+}

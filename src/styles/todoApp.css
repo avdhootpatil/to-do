@@ -3,8 +3,37 @@
   justify-content: space-between;
 }
 
-.add-task-btn {
+.app-header {
+  align-items: center;
+  margin: auto;
+}
+.add-task-btn,
+.add-task-btn:hover,
+.add-task-btn:focus {
   border-radius: 20px;
+  background-color: #0472b2;
+}
+.divide {
+  /* border: 1px solid #0472b2; */
+}
+
+.form-container {
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.labels {
+  font-weight: bold;
+}
+.tab-container {
+  margin-top: 20px;
+  margin-bottom: 35px;
+  margin-left: 10px;
+}
+
+.table-container {
+  margin-top: 15px;
+  margin-bottom: 35px;
 }
 
 .table-head-cell {
@@ -24,14 +53,14 @@
 .edit-btn,
 .edit-btn:hover,
 .edit-btn:focus {
-  background-color: blue;
+  background-color: #0472b2;
   border: none;
 }
 
 .done-btn,
 .done-btn:hover,
 .done-btn:focus {
-  background-color: green;
+  background-color: #3b954c;
   border: none;
   width: 69px;
 }
@@ -39,7 +68,7 @@
 .delete-btn,
 .delete-btn:hover,
 .delete-btn:focus {
-  background-color: red;
+  background-color: #d21d24;
   border: none;
 }
 
@@ -79,6 +108,7 @@
 .nav-link,
 .nav-link:hover {
   color: #0472b2;
+  font-weight: bold;
 }
 
 .nav-tabs .nav-link.active {

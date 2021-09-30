@@ -68,11 +68,10 @@ const TaskTable = ({
   };
 
   return (
-    <div>
-      <Table bordered size="sm">
+    <div className="table-container">
+      <Table size="sm">
         <thead>
           <tr>
-            <th>#</th>
             <th>
               Summary
               <Button className="sort-button" variant="link">
@@ -117,7 +116,6 @@ const TaskTable = ({
             .filter(searchTasks(formFields.search))
             .map((item, index) => (
               <tr key={"task" + index}>
-                <td></td>
                 <td onClick={handleViewClick(item.id)} className="task-cell">
                   <span
                     className={`d-block t-cell clip-summary ${

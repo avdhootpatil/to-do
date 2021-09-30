@@ -281,7 +281,7 @@ const TodoPage = () => {
     <div>
       <div>
         <div className="header-container">
-          <h4>ToDo App</h4>
+          <h3 className="app-header">To-Do </h3>
           <Button
             className="add-task-btn"
             onClick={handleSubmitTaskModal(null)}
@@ -289,36 +289,38 @@ const TodoPage = () => {
             +
           </Button>
         </div>
-        <hr></hr>
-        <Form>
-          <Row className="mb-3">
-            <Form.Group as={Col} controlId="formGridEmail">
-              <Form.Label>Group By</Form.Label>
-              <Form.Control
-                as="select"
-                value={formFields.groupBy}
-                onChange={handleFormChange("groupBy")}
-              >
-                {groupOptions.map((opn, index) => (
-                  <option key={"grp" + index} value={opn.id}>
-                    {opn.name}
-                  </option>
-                ))}
-              </Form.Control>
-            </Form.Group>
+        <hr className="divide"></hr>
+        <div className="form-container">
+          <Form>
+            <Row className="mb-3">
+              <Form.Group as={Col} controlId="formGridEmail">
+                <Form.Label className="labels">Group By</Form.Label>
+                <Form.Control
+                  as="select"
+                  value={formFields.groupBy}
+                  onChange={handleFormChange("groupBy")}
+                >
+                  {groupOptions.map((opn, index) => (
+                    <option key={"grp" + index} value={opn.id}>
+                      {opn.name}
+                    </option>
+                  ))}
+                </Form.Control>
+              </Form.Group>
 
-            <Form.Group as={Col} controlId="formGridPassword">
-              <Form.Label>Search</Form.Label>
-              <Form.Control
-                value={formFields.search}
-                onChange={handleFormChange("search")}
-              />
-            </Form.Group>
-          </Row>
-        </Form>
+              <Form.Group as={Col} controlId="formGridPassword">
+                <Form.Label className="labels">Search</Form.Label>
+                <Form.Control
+                  value={formFields.search}
+                  onChange={handleFormChange("search")}
+                />
+              </Form.Group>
+            </Row>
+          </Form>
+        </div>
       </div>
-      <hr></hr>
-      <div>
+      <hr className="divide"></hr>
+      <div className="tab-container">
         <Tabs
           id="controlled-tab-example"
           activeKey={key}

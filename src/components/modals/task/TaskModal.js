@@ -76,6 +76,7 @@ const TaskModal = ({
                   mode === "view" ? `disabled-datepicker` : ``
                 }`}
                 disabled={mode === "view" ? true : false}
+                minDate={new Date()}
               />
             </Form.Group>
 

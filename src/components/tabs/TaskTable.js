@@ -69,7 +69,7 @@ const TaskTable = ({
 
   return (
     <div>
-      <Table bordered>
+      <Table bordered size="sm">
         <thead>
           <tr>
             <th>#</th>

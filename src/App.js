@@ -3,8 +3,10 @@ import TodoPage from "./pages";
 
 function App() {
   return (
-    <div className="app">
-      <TodoPage />
+    <div className="app-container">
+      <div className="app">
+        <TodoPage />
+      </div>
     </div>
   );
 }

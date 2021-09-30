@@ -57,6 +57,7 @@ const TodoPage = () => {
     })();
   }, []);
 
+  //  dependecy flag for updating tastable component in useEffect
   const changeValue = () => {
     if (isValueChanged) {
       setIsValueChanged(false);
@@ -65,6 +66,7 @@ const TodoPage = () => {
     }
   };
 
+  // function to clear current task state.
   const clearCurrentTask = () => {
     setCurrentTask({
       id: 0,
@@ -77,10 +79,15 @@ const TodoPage = () => {
     });
   };
 
+  // function to clear errors.
   const clearErrors = () => {
     setErrors({});
   };
 
+  /**
+   * function to open and close modal.
+   * @param {string} props save or edit modal
+   */
   const handleSubmitTaskModal = (props) => (event) => {
     if (isTaskModalVisible) {
       if (props === "close") {
@@ -121,6 +128,11 @@ const TodoPage = () => {
     }
   };
 
+  /**
+   * onchange handler function for groupby and search
+   * @param {string} name --> name of property to change.
+   */
+
   const handleFormChange = (name) => (event) => {
     let nextState = produce(formFields, (draft) => {
       switch (name) {
@@ -141,6 +153,10 @@ const TodoPage = () => {
     setFormFields(nextState);
   };
 
+  /**
+   * On-chage handler function for modal form.
+   * @param {string} name --> name of the property for value change.
+   */
   const handleChange = (name) => (event) => {
     let nextErrors = { ...errors };
     let nextState = produce(currentTask, (draft) => {
@@ -180,6 +196,11 @@ const TodoPage = () => {
     setCurrentTask(nextState);
   };
 
+  /**
+   * Handler function for edit button clck.
+   * @param {string} id --> id of current clicked task.
+   */
+
   const handleEditClick = (id) => (event) => {
     event.preventDefault();
     let index = tasks.findIndex((tsk) => tsk.id === id);
@@ -189,6 +210,11 @@ const TodoPage = () => {
     setIsTaskModalVisible(true);
     changeValue();
   };
+
+  /**
+   * Handler function for done/re-open button click.
+   * @param {string} id --> id of current clicked task.
+   */
 
   const handleDoneClick = (id) => (event) => {
     event.preventDefault();
@@ -205,6 +231,10 @@ const TodoPage = () => {
     changeValue();
   };
 
+  /**
+   * Handler function for delete button click.
+   * @param {string} id --> id of current clicked task.
+   */
   const handleDeleteClick = (id) => (event) => {
     event.preventDefault();
     if (!isDeleteModalVisible) {
@@ -221,6 +251,11 @@ const TodoPage = () => {
     }
   };
 
+  /**
+   * Handler function for viewing task. (Fired when user clicks on any task in table.)
+   * @param {string} id --> id of current clicked task.
+   */
+
   const handleViewClick = (id) => (event) => {
     event.preventDefault();
     setMode("view");
@@ -231,6 +266,11 @@ const TodoPage = () => {
     setIsTaskModalVisible(true);
   };
 
+  /**
+   * Function to return filter function.
+   * @param {string} searchTerm --> term to filter for.
+   * @returns {Function} --> returns filter function.
+   */
   const searchTasks = (searchTerm) => {
     return function (x) {
       return x.summary.includes(searchTerm) || !searchTerm;
